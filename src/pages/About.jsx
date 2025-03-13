@@ -46,7 +46,7 @@ const About = () => {
         <meta name="author" content="TICE Institute" />
         <meta property="og:title" content="TICE - Best IT Training & Bootcamp Institute in Coimbatore" />
         <meta property="og:description" content="TICE Institute provides expert-led IT training in Coimbatore with placement assistance, hands-on projects, and industry-recognized certifications." />
-        <meta property="og:image" content={AboutBanner} />
+        <meta property="og:image" content={aboutBanner} />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
       </Helmet>
