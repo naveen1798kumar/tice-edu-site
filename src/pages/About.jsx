@@ -10,7 +10,7 @@ import TestimonialSlider from "../components/aboutcomponents/TestimonialSlider";
 // import SectionHeading from '../components/elememtcomponents/SectionHeading';
 
 import AboutUS from "../assets/about-us.jpg";
-import aboutBanner from "../assets/Banners/About-Banner.jpg";
+import aboutBanner from "../assets/Banners/blog-banner.jpg";
 import AboutSection from "../assets/about-section.jpg";
 import ContactSection from "../assets/Banners/Contact-Section.jpg";
 import Background from "../assets/background1.jpg"
