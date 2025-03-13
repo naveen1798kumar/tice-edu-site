@@ -10,7 +10,7 @@ import TestimonialSlider from "../components/aboutcomponents/TestimonialSlider";
 // import SectionHeading from '../components/elememtcomponents/SectionHeading';
 
 import AboutUS from "../assets/about-us.jpg";
-import AboutBanner from "../assets/Banners/About-Banner.jpg";
+import aboutBanner from "../assets/Banners/About-Banner.jpg";
 import AboutSection from "../assets/about-section.jpg";
 import ContactSection from "../assets/Banners/Contact-Section.jpg";
 import Background from "../assets/background1.jpg"
@@ -53,7 +53,7 @@ const About = () => {
     
   {/* Banner Section */}
 <Banner 
-  backgroundImage={AboutBanner}
+  backgroundImage={aboutBanner}
   title="Transform Your Career with EduCenter"
   description="Upgrade your skills with expert-led courses and take your career to the next level."
   breadcrumbs={[ "About"]}
