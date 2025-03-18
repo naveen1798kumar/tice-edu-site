@@ -34,7 +34,7 @@ function AboutSection() {
           className="absolute w-full md:w-[90%] h-full object-cover rounded-lg shadow-xl transform scale-105 filter grayscale hover:filter-none transition-all duration-500"
         /> 
         {/* Foreground Image */}
-        <motion.img
+        {/* <motion.img
             src={Aboutus}
             alt="Foreground Design"
             className="absolute -bottom-10 -left-8 hidden lg:block w-3/5 h-3/5 object-cover rounded-lg shadow-2xl"
@@ -46,7 +46,7 @@ function AboutSection() {
               repeat: Infinity,
               repeatType: "reverse",
             }}
-          />
+          /> */}
       </div>
 
       {/* Text Content */}

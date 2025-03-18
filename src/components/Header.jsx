@@ -11,6 +11,7 @@ const generatePath = (title) => title.toLowerCase().replace(/ /g, '-').replace(/
 const Header = ({ onToggleSidebar, isSidebarOpen }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50)
@@ -97,29 +98,38 @@ const defaultLinkClass = `
 
       {/* Dropdown Menu (Centered & Responsive) */}
       <div
-        className={`absolute left-1/2 top-full min-w-5xl w-full  transition-all duration-300 -translate-x-1/2 ${
+        className={`absolute left-1/2 top-full min-w-5xl max-h-[80vh] w-full  transition-all duration-300 -translate-x-1/2 overflow-scroll scrollbar-hidden ${
           isCoursesOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >
-        <div className="grid grid-cols-3 gap-6 px-6 py-4 mt-2 bg-white shadow-lg rounded-lg ">
-        {[...courses, ...diplomaCourse].map((category, index) => (
-                  <div key={index} className="mb-3">
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">{category.category}</h3>
-                    <div className="grid grid-cols-1 gap-2">
-                      {category.courses.map((course) => (
-                        <Link
-                          key={course.id}
-      to={`/courses/${generatePath(category.category)}/${generatePath(course.title)}`}
-                          className="block p-2 text-gray-700 hover:bg-gray-100 rounded-md"
-                          onClick={() => {setIsCoursesOpen(false), handleClick()}}
-                        >
-                          {course.title}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-        </div>
+<div className="grid grid-cols-3 gap-4 px-4 py-4 mt-3 bg-white border-2 border-indigo-700 shadow-xl rounded-lg overflow-hidden">
+  {[...courses, ...diplomaCourse].map((category, index) => (
+    <div key={index} className="p-4 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+      {/* Category Title */}
+      <h3 className="text-xl font-semibold text-indigo-600 border-l-4 border-indigo-500 pl-3 mb-3">
+        {category.category}
+      </h3>
+
+      {/* Courses List */}
+      <div className="space-y-2">
+        {category.courses.map((course) => (
+          <Link
+            key={course.id}
+            to={`/courses/${generatePath(category.category)}/${generatePath(course.title)}`}
+            className="block px-4 py-2 text-gray-800 bg-white/70 hover:bg-indigo-100 rounded-md transition-all duration-200"
+            onClick={() => {
+              setIsCoursesOpen(false);
+              handleClick();
+            }}
+          >
+            {course.title}
+          </Link>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
+
       </div>
     </li>
 
@@ -168,13 +178,13 @@ const defaultLinkClass = `
             <div className="w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-400 text-white shadow-md">
               <FaPhoneAlt className="text-sm" />
             </div>
-            <span className="text-gray-800 font-semibold text-sm">9876543210</span>
+            <span className="text-gray-800 font-semibold text-sm">9384293632</span>
           </div>
           <div className="flex items-center gap-3">
             <div className="w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 text-white shadow-md">
               <FaEnvelope className="text-sm" />
             </div>
-            <span className="text-gray-800 font-semibold text-sm">9876543210@gmail.com</span>
+            <span className="text-gray-800 font-semibold text-sm">sdspalani@gmail.com</span>
           </div>
         </div>
       </nav>

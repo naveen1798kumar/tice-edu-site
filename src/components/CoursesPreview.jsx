@@ -75,7 +75,7 @@ const CoursesPreview = () => {
               alt={course.title}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute flex inset-0 bg-black/70 group-hover:bg-gradient-to-r from-gray-400/40 via-gray-600/10 to-black/40 transition-all duration-300 group-hover:bg-opacity-60 items-end justify-start p-2">
+            <div className="absolute flex inset-0 bg-black/70 group-hover:bg-black/30 transition-all duration-300 group-hover:bg-opacity-60 items-end justify-start p-2">
               <span className="bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent group-hover:from-indigo-800 group-hover:to-gray-950 text-2xl md:text-3xl font-extrabold tracking-wide font-poppins">
                 {course.heading}
               </span>
